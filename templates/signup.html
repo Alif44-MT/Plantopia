@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup Modal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .signup-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("{% static 'imgs/hometr.jpg' %}");
+      background-color: rgba(0, 0, 0, 0.4);
+      background-repeat:no-repeat ;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-box {
+      background-color:  #7C8B52;
+      padding: 40px 30px;
+      border-radius: 10px;
+      width: 350px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .modal-box h2 {
+      text-align: center;
+      color: #750000;
+      margin-bottom: 25px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: white;
+      border: 2px solid #666;
+      color: #444;
+      font-size: 18px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .modal-box input[type="text"],
+    .modal-box input[type="email"],
+    .modal-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 25px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    .password-container {
+      position: relative;
+    }
+
+    .toggle-eye {
+      position: absolute;
+      right: 15px;
+      top: 21px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #3c571d;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-modal">
+    <div class="modal-box">
+      <button class="close-btn" type="button">&times;</button>
+      <h2>Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Enter Full Name" required />
+        <input type="email" placeholder="Enter your Email" required />
+        <div class="password-container">
+          <input type="password" placeholder="Password" required />
+          <span class="toggle-eye">👁️</span>
+        </div>
+        <div class="password-container">
+          <input type="password" placeholder="Confirm Password" required />
+          <span class="toggle-eye">👁️</span>
+        </div>
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Password visibility toggle
+    document.querySelectorAll('.toggle-eye').forEach(eye => {
+      eye.addEventListener('click', () => {
+        const input = eye.previousElementSibling;
+        if (input.type === "password") {
+          input.type = "text";
+          eye.textContent = "⛔";
+        } else {
+          input.type = "password";
+          eye.textContent = "👁️";
+        }
+      });
+    });
+
+    // Close modal
+    document.querySelector('.close-btn').addEventListener('click', () => {
+      document.querySelector('.signup-modal').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

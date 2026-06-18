@@ -1,0 +1,408 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantopia</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'imgs/PlantoPia.png'%}">
+
+</head>
+{% load static %}
+<body>
+        <div class="topbar">
+            <div class="top-row">
+                <div class="logo">
+                    <a href="#">
+                        <img src="{% static 'imgs/logo.png' %}" alt="Plantopia Logo">
+                    </a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="search" name="query" placeholder="Search your product">
+                    <button type="submit">
+                        <img src="{%static 'imgs/search_icon.png' %}" alt="Search">
+                    </button>
+                </div>
+
+                <div class="icons">
+                    <a href="#"><img src="{%static 'imgs/wishlist.gif'%}" alt="Wishlist"></a>
+                    <a href="#"><img src="{%static 'imgs/cartlogo.png'%}" alt="Cart"></a>
+                    <div class="account">
+                        <a href="#">
+                            <img src="{%static 'imgs/acntlogo.png'%}" alt="Account">
+                            Account
+                        </a>
+                        <div class="dropdown">
+                            <a href="Login.html" class="login-link">Login</a>
+                            <a href="Signup.html">SignUp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <div class="categories">
+                    Categories
+                    <div class="dropdown">
+                        <div class="plants">
+                            <a href="#">
+                                Plants
+                            </a>
+                                <div class="sub-dropdown">
+                                    <a href="#">Indoor Plants</a>
+                                    <a href="#">Outdoor Plants</a>
+                                    <a href="#">Flower Plants</a>
+                                    <a href="#">Friuts Plants</a>
+                                    <a href="#">vegetable Plants</a>
+
+                                </div>
+                        </div>
+                        <div class="seeds">
+                            <a href="#">Seeds</a>
+                            <div class="sub-dropdown">
+                             <a href="">Flower Seeds</a>
+                             <a href="">Herb Seeds</a>
+                             <a href="">Vegetable Seeds</a>
+                             <a href="">Tree Seeds</a>
+                             <a href="">Succulent Seeds</a>
+
+                            </div>
+                        </div> 
+                            <a href="#">Soil & Fertilizer</a>
+                            <a href="#">Pesticide</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <a href="#">Blogs</a>
+                    <div class="contact">
+                        Contact
+                        <div class="dropdown">
+                            <a href="#">☎️ Call Us 1625</a>
+                            <a href="#">Contact us with</a>
+                            <a href="#"><img src=""></a>
+                            <a href="#"><img src=""></a>
+                            <a href="#"><img src=""></a>
+                        </div>
+                    </div>
+                    <div class="more">
+                        More
+                        <div class="dropdown">
+                            <a href="#">Cancel Order</a>
+                            <a href="#">Rate Us</a>
+                            <a href="#">Return Product</a>
+                            <a href="#">Policies</a>
+                            <a href="#">Help Center</a>
+                            <a href="#">Reviews</a>
+                            <a href="#">About Us</a>
+                        </div>
+                    </div>
+            </nav>
+        </div>
+
+        {% extends 'base.html' %}
+        {% block content %}
+
+        <div class="main-section">
+            <div class="left-banner">
+                <div class="slider">
+                    <div class="banner-text">
+                        <h2>There's still Time to Spend<br>Something Green !</h2>
+                        <button><img src="{%static 'imgs/shopnow.gif'%}" alt="Shop Now"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-banners">
+                <div class="smallbanner">
+                    <img src="{%static 'imgs/hmdecr.jpg'%}" alt="Home Decor">
+                    <div class="banner-text">
+                        <span class="tag">20% OFF</span>
+                        <h3>HOME DECORATION</h3>
+                        <button>SHOP NOW</button>
+                    </div>
+                </div>
+
+                <div class="small-banner">
+                    <img src="{%static 'imgs/tools.jpg'%}" alt="Tools">
+                    <div class="banner-text">
+                        <span class="tag red">50% OFF</span>
+                        <span class="order-now">ORDER NOW</span>
+                        <h3>TOOLS</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Deals Banner -->
+        <div class="deal-banner">
+            <span class="deal-title">Best Deals</span>
+            <span class="deal-text">Deal ends in</span>
+            <span id="countdown" class="deal-timer">10d : 20h : 30m : 50s</span>
+        </div>
+        <div class="product-grid">
+
+            <!-- Sample Product Card -->
+            <div class="product-card">
+                <img src="imgs/flower.jpg" alt="Aglaonema">
+                <h3>Aglaonema</h3>
+                <p class="price">৳ 300.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="imgs/flower.jpg" alt="Aglaonema">
+                <h3>Aglaonema</h3>
+                <p class="price">৳ 300.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="imgs/flower.jpg" alt="Aglaonema">
+                <h3>Aglaonema</h3>
+                <p class="price">৳ 300.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="imgs/flower.jpg" alt="Aglaonema">
+                <h3>Aglaonema</h3>
+                <p class="price">৳ 300.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <!-- Duplicate this block for each product -->
+            <div class="product-card">
+                <img src="imgs/" alt="Pink Rose">
+                <h3>Pink Rose</h3>
+                <p class="price">৳ 160.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+
+            <!-- Continue the same for other product cards -->
+            <!-- You can copy and update the rest below -->
+
+            <!-- Sample -->
+            <div class="product-card">
+                <img src="imgs/" alt="Black Seeds">
+                <h3>Black Seeds</h3>
+                <p class="price">৳ 160.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <!-- Add remaining products here just like above -->
+
+        </div>
+        <div class="product-grid">
+
+            <!-- Sample Product Card -->
+            <div class="product-card">
+                <img src="imgs/flower.jpg" alt="Aglaonema">
+                <h3>Aglaonema</h3>
+                <p class="price">৳ 300.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <!-- Duplicate this block for each product -->
+            <div class="product-card">
+                <img src="imgs/" alt="Pink Rose">
+                <h3>Pink Rose</h3>
+                <p class="price">৳ 160.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="imgs/" alt="Black Seeds">
+                <h3>Black Seeds</h3>
+                <p class="price">৳ 160.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="imgs/flower.jpg" alt="Aglaonema">
+                <h3>Aglaonema</h3>
+                <p class="price">৳ 300.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="imgs/" alt="Pink Rose">
+                <h3>Pink Rose</h3>
+                <p class="price">৳ 160.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="imgs/flower.jpg" alt="Aglaonema">
+                <h3>Aglaonema</h3>
+                <p class="price">৳ 300.00</p>
+                <div class="product-footer">
+                    <button class="order-btn">
+                        ORDER NOW <span class="cart-icon">🛒</span>
+                    </button>
+                    <span class="wishlist-icon">🤍</span>
+                </div>
+            </div>
+        </div>
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <h2>Shop with Categories</h2>
+            <div class="slider-container">
+                <button class="arrow left">&#10094;</button>
+
+                <div class="categories-slider">
+                    <div class="category-card">
+                        <img src="imgs/flower.jpg" alt="Plants">
+                        <p>Plants</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="seeds.jpg" alt="Seeds">
+                        <p>Seeds</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="pesticide.jpg" alt="Pesticide">
+                        <p>Pesticide</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="accessories.jpg" alt="Accessories">
+                        <p>Accessories</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="imgs/soil.jpg" alt="Soil & Fertilizer">
+                        <p>Soil & Fertilizer</p>
+                    </div>
+                </div>
+
+                <button class="arrow right">&#10095;</button>
+            </div>
+        </section>
+
+{% endblock %}
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone"></i> Sales and Support: 09613751212</p>
+                    <p><i class="fas fa-envelope"></i> support@plantopia.com</p>
+                    <p><i class="fas fa-id-card"></i> Trade License - TRAD/DNCC/066005/2022</p>
+                    <p><i class="fas fa-id-badge"></i> BIN: 004988289-0101</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dhanmondi,Dhaka 1207</p>
+                    <p><i class="fas fa-clock"></i> Daily 10am to 8pm</p>
+                    <p><i class="fas fa-shipping-fast"></i> Delivery Time 24-48 hours</p>
+                </div>
+
+                <div class="footer-section help">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms And Conditions</a></li>
+                        <li><a href="#">Return And Refund</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section payment">
+                    <h3>Pay with SSLCommerz</h3>
+                    <img src="{%static 'imgs/payment.jpg'%}" alt="Payment Methods">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Happy Planting form Plantopia team 🌿 Designed By Alif , Nishat , Annie © Plantopia Limited – All
+                    Rights
+                    Reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            const countdownElement = document.getElementById("countdown"); // The timer element
+
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 10); // Set to 10 days from now
+
+            function updateCountdown() {
+                const now = new Date().getTime();             // Current time
+                const distance = endDate.getTime() - now;     // Time left until the end
+
+                if (distance <= 0) {
+                    countdownElement.textContent = "Deal ended";  // If time is up
+                    clearInterval(timerInterval);                 // Stop the countdown
+                    return;
+                }
+
+                // Calculate days, hours, minutes, seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the time
+                countdownElement.textContent = `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+            }
+
+            const timerInterval = setInterval(updateCountdown, 1000); // Update every second
+            updateCountdown(); // Run once immediately
+
+        </script>
+
+    </body>
+
+</html>
