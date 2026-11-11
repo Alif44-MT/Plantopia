@@ -6,11 +6,11 @@ The main goal of Plantopia is to make plant shopping easier and more accessible 
 
 Users can explore different plant categories, browse gardening products, manage their shopping carts, save favorite products to their wishlists, and access gardening-related content.
 
-##🎨 UI Design & Prototype
+## 🎨 UI Design & Prototype
 
 The initial user interface and visual design of Plantopia were created using Canva to establish a user-friendly and engaging shopping experience.
 
-🔗 View Plantopia UI Design & Prototype
+🔗 [View Plantopia UI Design](https://www.canva.com/design/DAGfTMPsYHU/_lnvF5OugUa9gZLAovrv0w/edit) 
 
 ## 🎯 Project Objectives
 
